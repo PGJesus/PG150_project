@@ -22,11 +22,24 @@ a {
     border-bottom: 2px solid #ccc;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .logo img {
-    max-width: 300px; 
+    max-width: 150px; 
     height: auto;
     display: block; 
     margin: 0;
+}
+
+.school-name p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
 }
 
 .main-nav ul {
