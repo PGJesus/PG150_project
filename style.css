@@ -1,8 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
+    overflow-x: hidden;
 }
 
 ul {
@@ -24,6 +29,8 @@ a {
 .main-header {
     background-color: #5a6f7d;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .logo-container {
@@ -55,7 +62,7 @@ a {
     padding: 20px;
     background-color: #e8ddb3;
     flex-wrap: wrap;
-    margin: 0 -20px;
+    margin: 0;
     padding-left: 20px;
 }
 
@@ -188,6 +195,7 @@ main p {
     cursor: pointer;
     display: block;
     text-decoration: none;
+    min-height: 200px;
 }
 
 .gallery-item img {
@@ -434,29 +442,456 @@ main p {
     color: #aaa;
 }
 
+/* Tablet */
 @media (max-width: 900px) {
+    
+    .logo img {
+        max-width: 120px;
+    }
+    
+    .school-name p {
+        font-size: 1em;
+    }
+    
+    main {
+        padding: 15px 25px 25px 25px;
+        font-size: 1em;
+    }
+    
+    #tortenet {
+        font-size: 2em;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    
+    main h3 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    
+    main h4 {
+        font-size: 1.1em;
+        margin-top: 20px;
+        margin-bottom: 12px;
+    }
+    
+    main p {
+        margin-bottom: 15px;
+    }
     
     .main-nav ul {
         flex-direction: column;
-        align-items: center;
-        gap: 5px;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 0;
+        margin: 0;
     }
     
     .menu-item {
-        width: 90%;
+        width: 100%;
         text-align: center;
-        margin-bottom: 5px;
+        margin-bottom: 0;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
     }
     
     .submenu {
-        top: 100%;
-        left: 5%; 
-        min-width: 80%;
+        position: static;
+        visibility: hidden;
+        opacity: 0;
+        background-color: #d8cfa0;
+        min-width: 100%;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .menu-item:hover .submenu {
+        visibility: visible;
+        opacity: 1;
+        max-height: 300px;
+    }
+    
+    .submenu.active {
+        visibility: visible;
+        opacity: 1;
+        max-height: 300px;
+    }
+    
+    .submenu li a {
+        padding: 12px;
+        color: #333;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .pictures-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 20px;
+    }
+    
+    .gallery-label {
+        font-size: 1.3em;
+    }
+    
+    .galery-titles {
+        font-size: 1.8em;
+        margin-top: 8px;
+    }
+    
+    .registration-form {
+        max-width: 90%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    .modal-content {
+        max-width: 95%;
+        padding: 15px;
+    }
+    
+    .modal-close {
+        font-size: 2em;
+        right: 15px;
+        top: 5px;
     }
     
     .footer-content {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        gap: 15px;
+    }
+}
+
+/* Tablet (kisebb) - telefon (nagyobb) */
+@media (max-width: 768px) {
+    
+    .main-header {
+        padding: 15px;
+    }
+    
+    .logo-container {
+        gap: 10px;
+    }
+    
+    .logo img {
+        max-width: 100px;
+    }
+    
+    .school-name p {
+        font-size: 0.9em;
+    }
+    
+    main {
+        padding: 12px 15px 15px 15px;
+        font-size: 0.95em;
+        min-height: 350px;
+    }
+    
+    #tortenet {
+        font-size: 1.7em;
+    }
+    
+    main h3 {
+        font-size: 1.2em;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .pictures-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .picture-item {
+        aspect-ratio: auto;
+        min-height: 150px;
+    }
+    
+    .registration-form {
+        max-width: 95%;
+        padding: 15px;
+        margin: 15px auto;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    .form-submit {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+/* Telefonok */
+@media (max-width: 600px) {
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    .main-header {
+        padding: 10px;
+    }
+    
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding-bottom: 5px;
+    }
+    
+    .logo img {
+        max-width: 80px;
+    }
+    
+    .school-name {
+        text-align: center;
+    }
+    
+    .school-name p {
+        font-size: 0.8em;
+        line-height: 1.3;
+    }
+    
+    .main-nav ul {
+        padding: 5px 0;
+    }
+    
+    .menu-item {
+        padding: 10px 0;
+        font-size: 0.9em;
+    }
+    
+    .menu-item a {
+        font-size: 0.95em;
+    }
+    
+    .submenu li a {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+    
+    main {
+        padding: 10px;
+        font-size: 0.9em;
+        line-height: 1.6;
+        min-height: 300px;
+    }
+    
+    #tortenet {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    main h2 {
+        font-size: 1.3em;
+    }
+    
+    main h3 {
+        font-size: 1.1em;
+        margin-bottom: 12px;
+        margin-top: 12px;
+    }
+    
+    main h4 {
+        font-size: 1em;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    
+    main p {
+        margin-bottom: 12px;
+        text-align: left;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    
+    .gallery-item {
+        border: 1px solid #333;
+    }
+    
+    .gallery-label {
+        font-size: 1.1em;
+    }
+    
+    .galery-titles {
+        font-size: 1.5em;
+        margin-top: 5px;
+    }
+    
+    .pictures-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-top: 15px;
+    }
+    
+    .picture-item {
+        aspect-ratio: auto;
+        min-height: 120px;
+        border: 1px solid #333;
+    }
+    
+    .registration-form {
+        max-width: 100%;
+        padding: 12px;
+        margin: 12px 0;
+    }
+    
+    .registration-form p {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        font-size: 0.95em;
+        margin-bottom: 6px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #555;
+    }
+    
+    .form-group.checkbox {
+        flex-direction: row;
+    }
+    
+    .form-group.checkbox label {
+        font-size: 0.9em;
+    }
+    
+    .form-submit {
+        padding: 10px 15px;
+        font-size: 0.95em;
+    }
+    
+    .modal-content {
+        max-width: 98%;
+        padding: 10px;
+        max-height: 90vh;
+    }
+    
+    .modal-content img {
+        max-height: 85vh;
+    }
+    
+    .modal-close {
+        font-size: 1.8em;
+        right: 8px;
+        top: 2px;
+    }
+    
+    .main-footer {
+        padding: 20px 10px 8px 10px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 15px;
+    }
+    
+    .footer-content h3 {
+        font-size: 1.1em;
+        margin: 0 0 8px 0;
+    }
+    
+    .footer-content ul {
+        margin: 0;
+    }
+    
+    .footer-content ul a {
+        font-size: 0.9em;
+        line-height: 1.6;
+    }
+    
+    .contact-info p {
+        font-size: 0.9em;
+        margin: 5px 0;
+    }
+    
+    .copyright {
+        font-size: 0.75em;
+        padding-top: 8px;
+    }
+}
+
+/* Regebbi kisebb telefonok */
+@media (max-width: 400px) {
+    
+    .logo img {
+        max-width: 70px;
+    }
+    
+    .school-name p {
+        font-size: 0.75em;
+    }
+    
+    main {
+        padding: 8px;
+        font-size: 0.85em;
+    }
+    
+    #tortenet {
+        font-size: 1.3em;
+    }
+    
+    main h3 {
+        font-size: 1em;
+    }
+    
+    main h4 {
+        font-size: 0.95em;
+    }
+    
+    .pictures-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .picture-item {
+        min-height: 100px;
+    }
+    
+    .registration-form {
+        padding: 10px;
+    }
+    
+    .modal-close {
+        font-size: 1.5em;
+        right: 5px;
     }
 }
