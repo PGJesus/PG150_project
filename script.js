@@ -22,3 +22,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+function openModal(imgElement) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    if (imgElement) {
+        modalImg.src = imgElement.src;
+        modal.classList.add('active');
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('active');
+}

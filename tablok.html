@@ -40,9 +40,53 @@
     </header>
 
     <main>
-        <h3>Tablók</h3>
-        <p>Ebben a galériában az iskola történetéből származó tablók találhatók.</p>
+        <h3 class="galery-titles">Tablók</h3>
+        <div class="pictures-grid">
+            <div class="picture-item" onclick="openModal(this.querySelector('img'))">
+                <img src="képek/1.jpg" alt="Tablók 1">
+            </div>
+            <div class="picture-item" onclick="openModal(this.querySelector('img'))">
+                <img src="képek/2.jpg" alt="Tablók 2">
+            </div>
+            <div class="picture-item" onclick="openModal(this.querySelector('img'))">
+                <img src="képek/3.jpg" alt="Tablók 3">
+            </div>
+            <div class="picture-item" onclick="openModal(this.querySelector('img'))">
+                <img src="képek/4.jpg" alt="Tablók 4">
+            </div>
+            <div class="picture-item" onclick="openModal(this.querySelector('img'))">
+                <img src="képek/5.jpg" alt="Tablók 5">
+            </div>
+            <div class="picture-item" onclick="openModal(this.querySelector('img'))">
+                <img src="képek/6.jpg" alt="Tablók 6">
+            </div>
+            <div class="picture-item" onclick="openModal(this.querySelector('img'))">
+                <img src="képek/7.jpg" alt="Tablók 7">
+            </div>
+            <div class="picture-item" onclick="openModal(this.querySelector('img'))">
+                <img src="képek/8.jpg" alt="Tablók 8">
+            </div>
+            <div class="picture-item" onclick="openModal(this.querySelector('img'))">
+                <img src="képek/9.jpg" alt="Tablók 9">
+            </div>
+            <div class="picture-item" onclick="openModal(this.querySelector('img'))">
+                <img src="képek/10.jpg" alt="Tablók 10">
+            </div>
+            <div class="picture-item" onclick="openModal(this.querySelector('img'))">
+                <img src="képek/11.jpg" alt="Tablók 11">
+            </div>
+            <div class="picture-item" onclick="openModal(this.querySelector('img'))">
+                <img src="képek/12.jpg" alt="Tablók 12">
+            </div>
+        </div>
     </main>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
 
     <footer class="main-footer">
         <div class="footer-content">
