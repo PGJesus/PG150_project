@@ -17,15 +17,15 @@ a {
 }
 
 .main-header {
-    background-color: #eee;
+    background-color: #5a6f7d;
     padding: 20px;
-    border-bottom: 2px solid #ccc;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
     gap: 15px;
+    padding-bottom: 10px;
 }
 
 .logo img {
@@ -40,14 +40,18 @@ a {
     font-weight: bold;
     margin: 0;
     line-height: 1.2;
+    color: #ffffff;
 }
 
 .main-nav ul {
     display: flex; 
-    justify-content: space-between;
-    padding-top: 10px;
-    gap: 10px; 
-    max-width: none; 
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background-color: #e8ddb3;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+    padding-left: 20px;
 }
 
 .menu-item {
@@ -105,35 +109,54 @@ a {
     background-color: #f0f0f0;
 }
 
-.tanitokepzo { background-color: #311d1f; }
-.tanitokepzo a { color: #fcf5a8; }
-.tanitokepzo:hover { background-color: #4a2d30; }
+.tanitokepzo { background-color: #6d4c41; }
+.tanitokepzo a { color: #ffffff; }
+.tanitokepzo:hover { background-color: #8b5a3c; }
 
-.testnevelesi-gimnazium { background-color: #1f3864; }
-.testnevelesi-gimnazium a { color: #bbd5ed; }
-.testnevelesi-gimnazium:hover { background-color: #324c7f; }
+.testnevelesi-gimnazium { background-color: #6d4c41; }
+.testnevelesi-gimnazium a { color: #ffffff; }
+.testnevelesi-gimnazium:hover { background-color: #8b5a3c; }
 
-.petofi-gimnazium { background-color: #385723; }
-.petofi-gimnazium a { color: #ccffcc; }
-.petofi-gimnazium:hover { background-color: #4c6a37; }
+.petofi-gimnazium { background-color: #6d4c41; }
+.petofi-gimnazium a { color: #ffffff; }
+.petofi-gimnazium:hover { background-color: #8b5a3c; }
 
-.gepeszeti { background-color: #636466; }
-.gepeszeti a { color: #dcddde; }
-.gepeszeti:hover { background-color: #797a7c; }
+main {
+    min-height: 400px;
+    padding: 20px 40px 40px 40px;
+    background-color: #5a6f7d;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
 
-.szent-benedek { background-color: #6d4e27; }
-.szent-benedek a { color: #f3dbaf; }
-.szent-benedek:hover { background-color: #8c6a3e; }
+main h2 {
+    text-align: left;
+    color: #ffffff;
+}
 
-.mozaik { background-color: #8a0054; }
-.mozaik a { color: #E2d0d9; }
-.mozaik:hover { background-color: #a40062; }
+main h3 {
+    font-size: 1.5em;
+    color: #e8ddb3;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+main p {
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.udvozlet {
+    text-align: right;
+    font-size: 20px;
+    margin: 0;
+}
 
 .main-footer {
     background-color: #333;
     color: #fff;
     padding: 30px 20px 10px 20px;
-    margin-top: 40px;
 }
 
 .footer-content {
