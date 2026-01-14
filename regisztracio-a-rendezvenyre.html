@@ -40,8 +40,60 @@
     </header>
 
     <main>
-        <h3>Regisztráció a rendezvényre</h3>
-        <p>Ez az oldal a rendezvényre való regisztrációról szól.</p>
+        <h3 class="galery-titles">Regisztráció a rendezvényre</h3>
+        <div class="registration-form">
+            <p>Kérjük, töltse ki az alábbi űrlapot a rendezvényre való regisztrációhoz:</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Név:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefonszám:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="birth">Születési dátum:</label>
+                    <input type="date" id="birth" name="birth">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Cím:</label>
+                    <input type="text" id="address" name="address">
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Kategória:</label>
+                    <select id="category" name="category" required>
+                        <option value="">Válasszon egy lehetőséget</option>
+                        <option value="student">Diák</option>
+                        <option value="teacher">Tanár</option>
+                        <option value="parent">Szülő</option>
+                        <option value="alumni">Volt diák</option>
+                        <option value="other">Egyéb</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Üzenet (opcionális):</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">Elfogadom az adatkezelési szabályzatot</label>
+                </div>
+
+                <button type="submit" class="form-submit">Regisztráció</button>
+            </form>
+        </div>
     </main>
 
     <footer class="main-footer">
