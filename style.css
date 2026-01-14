@@ -16,6 +16,11 @@ a {
     color: inherit;
 }
 
+.logo-link {
+    display: block;
+    cursor: pointer;
+}
+
 .main-header {
     background-color: #5a6f7d;
     padding: 20px;
