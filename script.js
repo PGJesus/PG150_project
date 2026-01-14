@@ -7,26 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (link && submenu) {
             link.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                closeAllSubmenus(submenu);
-                
-                submenu.classList.toggle('active');
+                // Allow the link to navigate while submenu is visible on hover
+                // The submenu will appear on hover via CSS
             });
         }
     });
 
-    function closeAllSubmenus(currentSubmenu) {
-        document.querySelectorAll('.submenu').forEach(sub => {
-            if (sub !== currentSubmenu && sub.classList.contains('active')) {
-                sub.classList.remove('active');
-            }
-        });
-    }
-
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.main-nav')) {
-            closeAllSubmenus(null);
+            // Close dropdowns when clicking outside
+            document.querySelectorAll('.submenu').forEach(sub => {
+                sub.classList.remove('active');
+            });
         }
     });
 });

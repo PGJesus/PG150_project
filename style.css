@@ -88,6 +88,11 @@ a {
     transition: visibility 0s, opacity 0.3s linear;
 }
 
+.menu-item:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
 .submenu li {
     display: block !important; 
     width: 100% !important; 
@@ -109,17 +114,17 @@ a {
     background-color: #f0f0f0;
 }
 
-.tanitokepzo { background-color: #6d4c41; }
-.tanitokepzo a { color: #ffffff; }
-.tanitokepzo:hover { background-color: #8b5a3c; }
+.tortenet { background-color: #6d4c41; }
+.tortenet a { color: #ffffff; }
+.tortenet:hover { background-color: #8b5a3c; }
 
-.testnevelesi-gimnazium { background-color: #6d4c41; }
-.testnevelesi-gimnazium a { color: #ffffff; }
-.testnevelesi-gimnazium:hover { background-color: #8b5a3c; }
+.galeria { background-color: #6d4c41; }
+.galeria a { color: #ffffff; }
+.galeria:hover { background-color: #8b5a3c; }
 
-.petofi-gimnazium { background-color: #6d4c41; }
-.petofi-gimnazium a { color: #ffffff; }
-.petofi-gimnazium:hover { background-color: #8b5a3c; }
+.regisztracio-a-rendezvenyre { background-color: #6d4c41; }
+.regisztracio-a-rendezvenyre a { color: #ffffff; }
+.regisztracio-a-rendezvenyre:hover { background-color: #8b5a3c; }
 
 main {
     min-height: 400px;
