@@ -154,11 +154,6 @@ main {
     text-align: center;
 }
 
-main h2 {
-    text-align: left;
-    color: #ffffff;
-}
-
 main h3 {
     font-size: 1.5em;
     color: #e8ddb3;
@@ -896,7 +891,6 @@ main p {
     }
 }
 
-/* Videos panel and grid to match the screenshot */
 .content-panel {
     max-width: 1180px;
     margin: 28px auto;
@@ -913,14 +907,12 @@ main p {
     margin-bottom: 20px;
 }
 
-/* 3-column video grid */
 .video-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
 }
 
-/* Each video tile */
 .video-item {
     background: #22272b;
     border-radius: 4px;
@@ -928,13 +920,12 @@ main p {
     position: relative;
     overflow: hidden;
     box-shadow: 0 6px 14px rgba(0,0,0,0.35);
-    height: 160px; /* consistent thumbnail height */
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Make Facebook SDK embeds fill the tile */
 .video-item .fb-video,
 .video-item .fb-video > div,
 .video-item iframe {
@@ -945,7 +936,6 @@ main p {
     border: none !important;
 }
 
-/* Fallback link (visible when embed fails) */
 .video-fallback {
     position: absolute;
     bottom: 10px;
@@ -959,7 +949,6 @@ main p {
     text-decoration: none;
 }
 
-/* Smaller screens */
 @media (max-width: 900px) {
     .video-grid { grid-template-columns: repeat(2, 1fr); }
     .content-panel { padding: 24px; }
